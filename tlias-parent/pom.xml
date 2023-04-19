@@ -21,13 +21,48 @@
         <module>../tlias-utils</module>
         <module>../tlias-web-management</module>
     </modules>
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
 
+        <lombok.version>1.18.24</lombok.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <aliyun.oss.version>3.15.1</aliyun.oss.version>
+        <jaxb.version>2.3.1</jaxb.version>
+        <activation.version>1.1.1</activation.version>
+        <jaxb.runtime.version>2.3.3</jaxb.runtime.version>
+    </properties>
+       <!--统一管理依赖版本-->
     <dependencyManagement>
         <dependencies>
+            <!--JWT令牌-->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt</artifactId>
-                <version>0.9.1</version>
+                <version>${jjwt.version}</version>
+            </dependency>
+
+            <!--阿里云OSS-->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun.oss.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>activation</artifactId>
+                <version>${activation.version}</version>
+            </dependency>
+            <!-- no more than 2.3.3-->
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>${jaxb.runtime.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -35,12 +70,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>${lombok.version}</version>
         </dependency>
     </dependencies>
-<!--    <properties>-->
-<!--        <maven.compiler.source>11</maven.compiler.source>-->
-<!--        <maven.compiler.target>11</maven.compiler.target>-->
-<!--    </properties>-->
 
 </project>
