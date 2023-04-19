@@ -6,7 +6,12 @@
 
 
 > 双击public\tlias\nginx-1.22.0-tlias\nginx.exe即可启动前端服务
-[api文档](public/api接口文档.md)
+
+
+[api文档](public/tlias/api接口文档.md)
+
+[直接启动nginx服务](public/tlias/nginx-1.22.0-tlias/nginx.exe)
+
 sql准备：
 ```sql
 /*
