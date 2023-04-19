@@ -4,8 +4,10 @@
 
 ![image-20230411155130487](README.assets/image-20230411155130487.png)
 
-sql准备：
+
 > 双击public\tlias\nginx-1.22.0-tlias\nginx.exe即可启动前端服务
+[api文档](public/api接口文档.md)
+sql准备：
 ```sql
 /*
  Navicat Premium Data Transfer
